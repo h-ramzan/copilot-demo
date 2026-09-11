@@ -1,0 +1,9 @@
+{
+  "model": "auto",
+  "effortLevel": "high",
+  "respectGitignore": true,
+  "disableAllHooks": false,
+  "mergeStrategy": "merge",
+  "includeCoAuthoredBy": false,
+  "deniedUrls": []
+}
