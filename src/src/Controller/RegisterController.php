@@ -16,7 +16,7 @@ class RegisterController extends AppController
     public function index(): void
     {
         // Variables passed to the view via set() are available in the template.
-        $this->set('site-name', 'CakePHP');
+        $this->set('siteName', 'CakePHP');
         $this->set('pageTitle', 'Create your account');
         $this->set('passwordMinLength', 8);
     }
