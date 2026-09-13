@@ -34,6 +34,7 @@ $this->disableAutoLayout();
             </div>
 
             <form class="login-form" method="post" action="">
+                <input type="hidden" name="_csrfToken" value="<?= h($this->request->getAttribute('csrfToken')) ?>">
                 <div class="login-field">
                     <label for="name">Full name</label>
                     <input id="name" name="name" type="text" autocomplete="name" placeholder="Jane Doe" required>
