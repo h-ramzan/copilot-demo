@@ -3,9 +3,9 @@ declare(strict_types=1);
 
 /**
  * @var \App\View\AppView $this
- * @var string $siteName
- * @var string $pageTitle
- * @var int $passwordMinLength
+ * @var string $site_name
+ * @var string $page_title
+ * @var int $password_min_length
  */
 
 $this->disableAutoLayout();
@@ -15,21 +15,21 @@ $this->disableAutoLayout();
 <head>
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?= h($pageTitle) ?> | <?= h($siteName) ?></title>
+    <title><?= h($page_title) ?> | <?= h($site_name) ?></title>
     <?= $this->Html->meta('icon') ?>
     <?= $this->Html->css(['normalize.min', 'milligram.min', 'fonts', 'cake', 'login']) ?>
 </head>
 <body class="login-page">
     <main class="login-shell">
         <section class="login-card" aria-labelledby="register-title">
-            <a class="login-brand" href="<?= $this->Url->build('/') ?>" aria-label="<?= h($siteName) ?> home">
+            <a class="login-brand" href="<?= $this->Url->build('/') ?>" aria-label="<?= h($site_name) ?> home">
                 <span class="login-brand-mark" aria-hidden="true">C</span>
                 <span>Cake<span>PHP</span></span>
             </a>
 
             <div class="login-heading">
                 <p class="login-eyebrow">Get started</p>
-                <h1 id="register-title"><?= h($pageTitle) ?></h1>
+                <h1 id="register-title"><?= h($page_title) ?></h1>
                 <p>Fill in your details to sign up.</p>
             </div>
 
@@ -47,12 +47,12 @@ $this->disableAutoLayout();
 
                 <div class="login-field">
                     <label for="password">Password</label>
-                    <input id="password" name="password" type="password" autocomplete="new-password" placeholder="At least <?= h($passwordMinLength) ?> characters" minlength="<?= h($passwordMinLength) ?>" required>
+                    <input id="password" name="password" type="password" autocomplete="new-password" placeholder="At least <?= h($password_min_length) ?> characters" minlength="<?= h($password_min_length) ?>" required>
                 </div>
 
                 <div class="login-field">
                     <label for="confirm_password">Confirm password</label>
-                    <input id="confirm_password" name="confirm_password" type="password" autocomplete="new-password" placeholder="Re-enter your password" minlength="<?= h($passwordMinLength) ?>" required>
+                    <input id="confirm_password" name="confirm_password" type="password" autocomplete="new-password" placeholder="Re-enter your password" minlength="<?= h($password_min_length) ?>" required>
                 </div>
 
                 <label class="login-remember" for="terms">
