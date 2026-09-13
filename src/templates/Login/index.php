@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 /**
  * @var \App\View\AppView $this
+ * @var string $siteName
+ * @var string $pageTitle
  */
 
 $this->disableAutoLayout();
@@ -12,21 +14,21 @@ $this->disableAutoLayout();
 <head>
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sign in | CakePHP</title>
+    <title><?= h($pageTitle) ?> | <?= h($siteName) ?></title>
     <?= $this->Html->meta('icon') ?>
     <?= $this->Html->css(['normalize.min', 'milligram.min', 'fonts', 'cake', 'login']) ?>
 </head>
 <body class="login-page">
     <main class="login-shell">
         <section class="login-card" aria-labelledby="login-title">
-            <a class="login-brand" href="<?= $this->Url->build('/') ?>" aria-label="CakePHP home">
+            <a class="login-brand" href="<?= $this->Url->build('/') ?>" aria-label="<?= h($siteName) ?> home">
                 <span class="login-brand-mark" aria-hidden="true">C</span>
                 <span>Cake<span>PHP</span></span>
             </a>
 
             <div class="login-heading">
                 <p class="login-eyebrow">Welcome back</p>
-                <h1 id="login-title">Sign in to your account</h1>
+                <h1 id="login-title"><?= h($pageTitle) ?></h1>
                 <p>Enter your details to continue.</p>
             </div>
 
@@ -52,7 +54,7 @@ $this->disableAutoLayout();
                 <button class="login-submit" type="submit">Sign in</button>
             </form>
 
-            <p class="login-signup">Don’t have an account? <a href="#sign-up">Create one</a></p>
+            <p class="login-signup">Don’t have an account? <a href="<?= $this->Url->build('/register/register.php') ?>">Create one</a></p>
         </section>
     </main>
 </body>

@@ -15,5 +15,8 @@ class LoginController extends AppController
      */
     public function index(): void
     {
+        // Variables passed to the view via set() are available in the template.
+        $this->set('siteName', 'CakePHP');
+        $this->set('pageTitle', 'Sign in to your account');
     }
 }
