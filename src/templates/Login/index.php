@@ -52,7 +52,7 @@ $this->disableAutoLayout();
                 <button class="login-submit" type="submit">Sign in</button>
             </form>
 
-            <p class="login-signup">Don’t have an account? <a href="#sign-up">Create one</a></p>
+            <p class="login-signup">Don’t have an account? <a href="<?= $this->Url->build(['controller' => 'Register', 'action' => 'index']) ?>">Create one</a></p>
         </section>
     </main>
 </body>
