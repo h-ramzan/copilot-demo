@@ -1,3 +1,4 @@
 .docker/
 docker-compose.yml
-.github/copilot/settings.local.json
+.github/
+.devcontainer/
